@@ -1,0 +1,5 @@
+CREATE TABLE chats 
+(
+	idchat VARCHAR(40) PRIMARY KEY NOT NULL,
+	chatName VARCHAR(40) NOT NULL
+);

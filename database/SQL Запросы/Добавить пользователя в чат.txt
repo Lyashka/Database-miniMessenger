@@ -1,0 +1,2 @@
+INSERT INTO chatuser
+VALUES ('Neo', 4)   --Neo(username) 4-idchat
