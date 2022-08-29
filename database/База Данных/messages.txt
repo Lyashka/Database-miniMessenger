@@ -1,9 +1,0 @@
-CREATE TABLE messages
-(
-	idmessage bigint NOT NULL,
-	PRIMARY KEY(idmessage),
-	textmessage VARCHAR(1000) NOT NULL,
-	attachments VARCHAR (100),
-	idchat VARCHAR(40) NOT NULL,
-	FOREIGN KEY (idchat) REFERENCES chats(idchat)
-);
