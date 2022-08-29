@@ -1,5 +1,0 @@
-SELECT DISTINCT users.username  , blackList.username AS Locked, blackList.idchat
-FROM users, chatuser INNER JOIN blackList ON chatuser.username = blackList.username ,chats INNER JOIN (SELECT  username, idchat
-FROM chatuser 
-WHERE username = 'Neo')AS GG ON chats.idchat = GG.idchat     -- Neo - Имя пользователя, по которому ищутся все чаты, в которых состоит данный пользователь 
-WHERE users.username != blackList.username AND users.username= 'Neo' AND  chats.idchat = blackList.idchat -- Neo - имя пользователя, по которому выводят всех пользователей, занесенных в Черный список

@@ -1,4 +1,0 @@
-SELECT idmessage, textmessage,attachments, idchat, messages.username, users.name from messages, users
-WHERE messages.idmessage > 5 and messages.idchat = ANY  -- 5  - индекс сообщения. Выводятся все сообщения, имеющие больший индекс
-(SELECT idchat from chatuser
-WHERE username = 'ILA') AND users.username = messages.username -- ILA - имя пользователя

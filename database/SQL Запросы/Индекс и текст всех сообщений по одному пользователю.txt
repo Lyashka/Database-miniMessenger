@@ -1,3 +1,0 @@
-SELECT idmessage, textmessage, idchat, users.username, users.name
-FROM messages INNER JOIN users ON users.username = messages.username AND messages.username ='ILA' AND idchat = '1' 	--  'Me' и '1' - это значения, по которым отображаются сообщения от конкретного пользователя в конкретном чате
-order by idmessage DESC LIMIT 30;
