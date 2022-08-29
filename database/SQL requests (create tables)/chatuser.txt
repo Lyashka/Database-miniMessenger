@@ -1,0 +1,9 @@
+CREATE TABLE chatUser
+(
+	username VARCHAR(10)  NOT NULL,
+	idchat VARCHAR(40)  NOT NULL,
+	PRIMARY KEY(username,idchat),
+	FOREIGN KEY (username) REFERENCES users(username),
+	FOREIGN KEY (idchat) REFERENCES chats(idchat)
+
+);

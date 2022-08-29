@@ -1,0 +1,10 @@
+SELECT DISTINCT chatuser.username, chatname, chatuser.idchat, NumberOfUsers.Numbers, MaxNumb.LastMess
+
+FROM users, messages , chatuser, chats	INNER JOIN (SELECT chatuser.idchat AS GG, COUNT(*) AS Numbers
+											FROM chatuser, chats
+											WHERE chats.idchat = chatuser.idchat
+											GROUP BY chatuser.idchat)AS NumberOfUsers ON chats.idchat = GG
+										INNER JOIN (SELECT  idchat, MAX(idmessage) AS LastMess 
+											FROM messages
+											GROUP BY idchat)  AS  MaxNumb ON chats.idchat = MaxNumb.idchat
+WHERE users.username = chatuser.username AND chats.idchat = chatuser.idchat AND MaxNumb.LastMess IS NOT NULL  AND users.username = 'ILA' 

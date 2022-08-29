@@ -1,0 +1,2 @@
+INSERT INTO messages 
+VALUES (10, 'СООБЩЕНИЕ', 'ВЛОЖЕНИЕ', 2 ,'tu123')  --   10- это idmessage; 2- это idchat; tu123- это username
